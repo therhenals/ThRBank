@@ -1,0 +1,12 @@
+//Font
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Toolbar
+ion-toolbar {
+  --color: var(--ion-color-warning-shade);
+}
