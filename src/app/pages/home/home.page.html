@@ -10,9 +10,9 @@
       <ion-item lines="none">
         <ion-label>
           <ion-card-subtitle>Bienvenido</ion-card-subtitle>
-          <ion-card-title>Luis Rhenals</ion-card-title>
+          <ion-card-title>{{ profile?.firstName }} {{ profile?.lastName }}</ion-card-title>
         </ion-label>
-        <ion-fab-button size="small" color="danger">
+        <ion-fab-button (click)="signOut()" size="small" color="danger">
           <ion-icon name="log-out"></ion-icon>
         </ion-fab-button>
       </ion-item>

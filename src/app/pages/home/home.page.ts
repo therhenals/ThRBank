@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { ProfileInterface } from 'src/app/interfaces/profile.interface';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,8 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+
+  profile: ProfileInterface;
 
   actions = [
     {
@@ -26,14 +30,15 @@ export class HomePage implements OnInit {
   ];
 
   constructor(
-    private navController: NavController
+    private navController: NavController,
+    private authService: AuthService
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.profile = await this.authService.getProfile();
   }
 
   async goTo(path: string, direction: string) {
-    console.log(path, direction)
     try {
       if (direction == 'root') {
         this.navController.navigateRoot(path);
@@ -43,6 +48,10 @@ export class HomePage implements OnInit {
     } catch (error) {
 
     }
+  }
+
+  async signOut() {
+    await this.authService.signOut();
   }
 
 }

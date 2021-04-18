@@ -33,14 +33,27 @@ export class ApiClientService {
       }
       return config;
     });
+    this.axiosClient.interceptors.response.use((response) => {
+      return response;
+    }, (error) => {
+      return Promise.reject(error.response.data);
+    });
   }
 
-  async get<type>(url: string, config?: AxiosRequestConfig) {
-    return (await this.axiosClient.get<type>(url, config)).data;
+  async get<type>(url: string, config?: AxiosRequestConfig): Promise<any> {
+    try {
+      return (await this.axiosClient.get<type>(url, config)).data;
+    } catch (error) {
+      return Promise.reject(error);
+    }
   }
 
-  async post(url: string, body: {}, config?: AxiosRequestConfig) {
-    return (await this.axiosClient.post(url, body, config)).data;
+  async post(url: string, body: {}, config?: AxiosRequestConfig): Promise<any> {
+    try {
+      return (await this.axiosClient.post(url, body, config)).data;
+    } catch (error) {
+      return Promise.reject(error);
+    }
   }
 
 }
