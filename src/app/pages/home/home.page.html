@@ -5,5 +5,32 @@
 </ion-header>
 
 <ion-content>
+  <ion-card class="ion-margin-bottom">
+    <ion-card-header>
+      <ion-item lines="none">
+        <ion-label>
+          <ion-card-subtitle>Bienvenido</ion-card-subtitle>
+          <ion-card-title>Luis Rhenals</ion-card-title>
+        </ion-label>
+        <ion-fab-button size="small" color="danger">
+          <ion-icon name="log-out"></ion-icon>
+        </ion-fab-button>
+      </ion-item>
+    </ion-card-header>
+  </ion-card>
 
+  <ion-text class="ion-text-center ">
+    <h4>¿Que quieres hacer hoy?</h4>
+  </ion-text>
+
+  <ion-card class="ion-margin-top">
+    <ion-card-content>
+      <ion-list lines="full">
+        <ion-item (click)="goTo(action.page, action.direction)" button *ngFor="let action of actions">
+          <ion-icon color="primary" slot="start" [name]="action.icon"></ion-icon>
+          <ion-label>{{ action.name }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

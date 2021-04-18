@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  actions = [
+    {
+      name: 'Mis cuentas',
+      icon: 'cash',
+      page: 'tabs/accounts',
+      direction: 'root'
+    },
+    {
+      name: 'Inscribir cuentas',
+      icon: 'save'
+    },
+    {
+      name: 'Transferir con QR',
+      icon: 'qr-code'
+    }
+  ];
+
+  constructor(
+    private navController: NavController
+  ) { }
 
   ngOnInit() {
+  }
+
+  async goTo(path: string, direction: string) {
+    console.log(path, direction)
+    try {
+      if (direction == 'root') {
+        this.navController.navigateRoot(path);
+      } else {
+        this.navController.navigateForward(path);
+      }
+    } catch (error) {
+
+    }
   }
 
 }

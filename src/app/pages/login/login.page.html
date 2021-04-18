@@ -5,5 +5,32 @@
 </ion-header>
 
 <ion-content>
-
+  <h2 class="ion-text-center ion-margin-bottom">ThRBank</h2>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Ingresar tus datos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list lines="full">
+        <ion-item>
+          <ion-icon color="primary" slot="start" name="person"></ion-icon>
+          <ion-label position="floating">Nombre de usuario</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon color="primary" slot="start" name="key"></ion-icon>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>
+            <ion-button strong size="small" shape="round" expand="block">
+              <ion-icon slot="start" name="add"></ion-icon>
+              Iniciar Sesión
+            </ion-button>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
