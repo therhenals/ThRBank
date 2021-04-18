@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  baseURL: '',
   firebase: {
     apiKey: 'AIzaSyDFe1LLarjrltZVFmXHYODmaiIuCtu222Q',
     authDomain: 'thr-pruebas.firebaseapp.com',
