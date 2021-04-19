@@ -8,11 +8,11 @@ La aplicación está desarrollada con [Ionic](https://ionicframework.com/) y [Co
 
 ## Test users / Usuarios de prueba
 
-Username: luis
-Password: demopass
+Username: **luis**
+Password: **demopass**
 
-Username: yomaris
-Password: demopass2
+Username: **yomaris**
+Password: **demopass2**
 
 ---
 
