@@ -6,6 +6,16 @@ The app is developed with [Ionic](https://ionicframework.com/) and [Cordova](htt
 ### Español
 La aplicación está desarrollada con [Ionic](https://ionicframework.com/) y [Cordova](https://cordova.apache.org/)
 
+## Test users / Usuarios de prueba
+
+Username: luis
+Password: demopass
+
+Username: yomaris
+Password: demopass2
+
+---
+
 ## Information / Información
 
 ### English
