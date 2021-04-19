@@ -16,6 +16,21 @@ const routes: Routes = [
       ignore: true
     }
   },
+  {
+    path: 'transfer',
+    loadChildren: () => import('./pages/transfer/transfer.module').then( m => m.TransferPageModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'inscribe',
+    loadChildren: () => import('./pages/inscribe/inscribe.module').then( m => m.InscribePageModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'account/:number',
+    loadChildren: () => import('./pages/account/account.module').then( m => m.AccountPageModule),
+    canActivate: [AuthGuard],
+  }
 ];
 @NgModule({
   imports: [

@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list lines="full">
-    <ion-item *ngFor="let account of accounts">
+    <ion-item [routerLink]="'/account/' + account.number" *ngFor="let account of accounts">
       <ion-icon color="primary" slot="start" name="cash"></ion-icon>
       <ion-label>
         <h2>{{ account.alias }}</h2>

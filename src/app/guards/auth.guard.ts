@@ -22,7 +22,7 @@ export class AuthGuard implements CanActivate {
       this.authService.authState().subscribe(async user => {
         if (user) {
           if (next.data.ignore) {
-            await this.navController.navigateRoot('/tabs/home', { animated: true });
+            await this.navController.navigateRoot('/home', { animated: true });
           }
           this.hideSplash();
           resolve(true);

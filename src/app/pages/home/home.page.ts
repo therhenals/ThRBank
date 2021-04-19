@@ -16,16 +16,18 @@ export class HomePage implements OnInit {
     {
       name: 'Mis cuentas',
       icon: 'cash',
-      page: 'tabs/accounts',
+      page: 'accounts',
       direction: 'root'
     },
     {
       name: 'Inscribir cuentas',
-      icon: 'save'
+      icon: 'save',
+      page: 'inscribe'
     },
     {
-      name: 'Transferir con QR',
-      icon: 'qr-code'
+      name: 'Transferir dinero',
+      icon: 'send',
+      page: 'transfer',
     }
   ];
 

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inscribir cuentas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="inscribeForm" (ngSubmit)="inscribe()">
+        <ion-list lines="full">
+          <ion-item>
+            <ion-icon color="primary" slot="start" name="wallet"></ion-icon>
+            <ion-label position="floating">Alias</ion-label>
+            <ion-input formControlName="alias"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-icon color="primary" slot="start" name="business"></ion-icon>
+            <ion-label position="stacked">Entidad Bancaria</ion-label>
+            <ion-select formControlName="bankingEntity">
+              <ion-select-option value="ThRBank">ThRBank</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-icon color="primary" slot="start" name="calculator"></ion-icon>
+            <ion-label position="stacked">Tipo de cuenta</ion-label>
+            <ion-select formControlName="type">
+              <ion-select-option value="ahorro">Ahorros</ion-select-option>
+              <ion-select-option value="corriente">Corriente</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-icon color="primary" slot="start" name="keypad"></ion-icon>
+            <ion-label position="floating">Número de cuenta</ion-label>
+            <ion-input formControlName="number"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-icon color="primary" slot="start" name="person"></ion-icon>
+            <ion-label position="floating">Identificación del titular de la cuenta</ion-label>
+            <ion-input formControlName="identification"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-icon color="primary" slot="start" name="cash"></ion-icon>
+            <ion-label position="stacked">Moneda</ion-label>
+            <ion-select formControlName="currency">
+              <ion-select-option value="cop">COP</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label>
+              <ion-button type="submit" [disabled]="!inscribeForm.valid" strong size="small" shape="round"
+                expand="block">
+                <ion-icon slot="start" name="add"></ion-icon>
+                Inscribir
+              </ion-button>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
