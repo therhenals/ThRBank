@@ -15,7 +15,7 @@ export class AccountPage implements OnInit {
 
   number: number;
   account: AccountInterface;
-  transactions: TrasactionInterface;
+  transactions: TrasactionInterface[];
 
   constructor(
     private apiClient: ApiClientService,

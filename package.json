@@ -4,6 +4,7 @@
   "author": "TheRhenals <me@therhenals.com> (https://therhenals.com)",
   "homepage": "https://therhenals.com/",
   "scripts": {
+    "prepare": "ionic cordova platform add android",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

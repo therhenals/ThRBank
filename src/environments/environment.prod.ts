@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  baseURL: '',
+  baseURL: 'https://thrbank-backend.vercel.app',
   firebase: {
     apiKey: 'AIzaSyDFe1LLarjrltZVFmXHYODmaiIuCtu222Q',
     authDomain: 'thr-pruebas.firebaseapp.com',

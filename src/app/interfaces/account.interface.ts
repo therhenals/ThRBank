@@ -1,4 +1,5 @@
 export interface AccountInterface {
+    alias: string;
     user: string;
     balance: number;
     type: string;
