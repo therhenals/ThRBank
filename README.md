@@ -22,7 +22,7 @@ Password: demopass2
 I allow myself to compile an [apk](https://github.com/therhenals/ThRBank/blob/main/app-debug.apk?raw=true) of the app in production version, this apk points to the [api](https://github.com/therhenals/ThRBank_backend) mounted on [vercel.com](https://thrbank-backend.vercel.app/api), I do this for practical purposes.
 
 ### Español
-Me permito compilar un [apk]() de la aplicación en versión producción, este apk apunta a la api montada en [vercel.com](https://thrbank-backend.vercel.app/api), lo hago por cuestiones prácticas.
+Me permito compilar un [apk](https://github.com/therhenals/ThRBank/blob/main/app-debug.apk?raw=true) de la aplicación en versión producción, este apk apunta a la api montada en [vercel.com](https://thrbank-backend.vercel.app/api), lo hago por cuestiones prácticas.
 
 ## Requirements / Requerimientos
 
